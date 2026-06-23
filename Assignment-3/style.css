@@ -1,112 +1,199 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+body{
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+
 #nav{
-    height: 75px;
     background-color: #f6f3ec;
     border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 60px;
 }
 
-.logo{
-    margin-left: 70px;
+.logo h1{
+    font-size: 2rem;
 }
 
 .link{
-    margin-right: 80px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .link a{
     color: black;
     text-decoration: none;
-    font-size: 1.1em;
-    margin-left: 10px;
+    font-size: 1rem;
 }
 
 #spclLink{
     background-color: black;
     color: white;
-    padding: 7px 12px;
-    border-radius: 60px;
+    padding: 10px 18px;
+    border-radius: 30px;
 }
 
+/* Main Section */
+
 #main{
-    height: 485px;
+    min-height: calc(100vh - 150px);
     background-color: #f6f3ec;
     border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 50px 60px;
 }
 
 .content{
-    /* border: 2px solid red; */
-    margin-left: 75px;
+    max-width: 650px;
 }
 
- 
-
-.contentA{
-    margin-top: 60px;
-    font-size: 6em;
-    font-weight: lighter;
-    /* border: 2px solid red; */
-}
-
+.contentA,
 .contentB{
-    font-size: 6em;
-    font-weight: lighter;
+    font-size: 6rem;
+    font-weight: 300;
+    line-height: 1;
 }
 
 .content p{
-    font-size: 1.5em;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    font-size: 1.5rem;
+    margin: 35px 0;
 }
 
 .content a{
+    text-decoration: none;
     color: white;
     background-color: black;
-    padding: 10px 20px;
-    border-radius: 60px;
-    text-decoration: none;
-    margin-top: 100px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    display: inline-block;
 }
 
-div.image img{
-    height: 100%;
+.image img{
+    max-width: 100%;
+    width: 500px;
+    height: auto;
 }
+
+/* Footer */
 
 footer{
     background-color: #f6f3ec;
-    height: 73px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
 }
 
 footer a{
-    color: black;
     text-decoration: none;
-    margin-left: 10px;
+    color: black;
+    font-size: 0.9rem;
 }
 
-@media (max-width:728px){
+/* Tablet */
+
+@media (max-width: 992px){
+
+    #main{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 40px 30px;
+    }
+
+    .contentA,
+    .contentB{
+        font-size: 4.5rem;
+    }
+
+    .content p{
+        font-size: 1.3rem;
+    }
+
+    .image img{
+        width: 400px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px){
+
+    #nav{
+        padding: 20px;
+    }
+
     .navLink{
         display: none;
     }
-}
 
-@media(max-width:551px){
-    .abc{
+    .contentA,
+    .contentB{
+        font-size: 3.5rem;
+    }
+
+    .content p{
+        font-size: 1.1rem;
+    }
+
+    .image{
         display: none;
     }
 }
 
-@media(max-width:900px){
-    .image{
+/* Small Mobile */
+
+@media (max-width: 480px){
+
+    #nav{
+        padding: 15px;
+    }
+
+    .logo h1{
+        font-size: 1.6rem;
+    }
+
+    .abc{
         display: none;
+    }
+
+    #spclLink{
+        padding: 8px 14px;
+        font-size: 0.9rem;
+    }
+
+    .contentA,
+    .contentB{
+        font-size: 2.5rem;
+    }
+
+    .content p{
+        font-size: 1rem;
+    }
+
+    .content a{
+        padding: 10px 18px;
+    }
+
+    footer{
+        gap: 10px;
+    }
+
+    footer a{
+        font-size: 0.8rem;
     }
 }
