@@ -1,0 +1,197 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#edf2f7;
+}
+
+.topbar{
+    background:#1e293b;
+    color:white;
+    padding:18px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand{
+    font-size:24px;
+    font-weight:700;
+}
+
+.topbar nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.topbar nav a:hover{
+    color:#38bdf8;
+}
+
+/* Hero Section */
+
+.hero-section{
+    text-align:center;
+    color:white;
+    padding:70px 20px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #0f172a
+    );
+}
+
+.hero-section h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero-section p{
+    max-width:650px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.hero-section button{
+    margin-top:20px;
+    padding:12px 28px;
+
+    border:none;
+    border-radius:30px;
+
+    background:white;
+    color:#2563eb;
+
+    font-weight:bold;
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.hero-section button:hover{
+    transform:scale(1.05);
+}
+
+.page-layout{
+    display:grid;
+    grid-template-columns:220px 1fr 250px;
+    gap:20px;
+    padding:25px;
+}
+
+.quick-links{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    height:fit-content;
+}
+
+.quick-links h2{
+    margin-bottom:15px;
+    color:#2563eb;
+}
+
+.quick-links a{
+    display:block;
+    text-decoration:none;
+    color:#333;
+    padding:10px 0;
+}
+
+.quick-links a:hover{
+    color:#2563eb;
+}
+
+.content-box{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+
+    border-radius:12px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.content-box h2{
+    color:#2563eb;
+    margin-bottom:12px;
+}
+
+.content-box p{
+    line-height:1.8;
+}
+
+.updates-panel{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.info-box{
+    background:white;
+    padding:20px;
+
+    border-radius:12px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.info-box:hover{
+    transform:translateY(-5px);
+}
+
+.info-box h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+footer{
+    margin-top:20px;
+    background:#1e293b;
+    color:white;
+
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:900px){
+
+    .page-layout{
+        grid-template-columns:1fr;
+    }
+
+    .updates-panel{
+        order:3;
+    }
+
+    .quick-links{
+        order:2;
+    }
+}
+
+@media(max-width:700px){
+
+    .topbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .topbar nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-section h1{
+        font-size:32px;
+    }
+}
